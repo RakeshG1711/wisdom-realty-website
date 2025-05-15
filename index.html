@@ -178,19 +178,145 @@
             <a href="https://linkedin.com/in/wisdom-realty-24992a298/" target="_blank"><img src="assets/linkedin icon.png" alt="LinkedIn"></a>
         </div>
     </div>
-
-    <div class="section contact" id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-form">
-            <form action="https://formsubmit.co/wisdomreality.in@gmail.com" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="tel" name="phone" placeholder="Your Phone Number" required>
-                <input type="email" name="email" placeholder="Your Email (Optional)">
-                <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .contact-form {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+        }
+        .contact-form h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .popup {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .popup h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .popup button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="https://formsubmit.co/your-email@example.com" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit" onclick="showPopup(event)">Send Message</button>
+        </form>
+    </div>
+    <div class="popup-overlay" id="popup-overlay" style="display: none;">
+        <div class="popup">
+            <h2>Thank You!</h2>
+            <p>Your message has been sent successfully. We will get back to you soon.</p>
+            <button onclick="closePopup()">Close</button>
         </div>
     </div>
+    <script>
+        function showPopup(event) {
+            event.preventDefault();
+            document.getElementById("popup-overlay").style.display = "flex";
+        }
+        function closePopup() {
+            document.getElementById("popup-overlay").style.display = "none";
+            document.querySelector("form").reset();
+        }
+    </script>
+</body>
+</html>
 
     <footer>
         <p>© 2025 Wisdom Realty. All rights reserved.</p>
