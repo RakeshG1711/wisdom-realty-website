@@ -1,39 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisdom Realty - Real Estate Expertise</title>
+    <title>Wisdom Realty - Premium Properties</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
-            padding: 0;
+            background-color: #f7f7f7;
             overflow-x: hidden;
-            scroll-behavior: smooth;
         }
         .navbar {
             background-color: #003366;
             color: #ffffff;
-            padding: 10px 20px;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
+            padding: 15px 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 30px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .navbar img {
-            width: 120px;
+            width: 150px;
+            margin-right: 30px;
         }
         .navbar ul {
             list-style: none;
             display: flex;
-            gap: 20px;
-            margin: 70px;
+            gap: 30px;
+            margin: 80;
         }
         .navbar ul li a {
             color: #ffffff;
@@ -44,98 +45,68 @@
         .navbar ul li a:hover {
             color: #ffc107;
         }
-        .header {
-            background-color: #003366;
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+        .social-icons a img {
+            width: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .social-icons a img:hover {
+            transform: scale(1.2);
+        }
+        .hero {
+            background-image: url('assets/hero.jpg');
+            background-size: cover;
+            background-position: center;
             color: #ffffff;
-            padding: 140px 20px 60px;
+            padding: 180px 20px 120px;
             text-align: center;
         }
-        .header h1 {
+        .hero h1 {
+            font-size: 3.5em;
             margin: 0;
-            font-size: 3em;
-            word-wrap: break-word;
         }
-        .header p {
+        .hero p {
             font-size: 1.2em;
-            margin-top: 10px;
+            margin: 20px 0 40px;
         }
-        .section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .experience, .projects, .contact {
-            margin-bottom: 60px;
-        }
-        .experience h2, .projects h2, .contact h2 {
+        .hero button {
+            background-color: #ffc107;
             color: #003366;
-            margin-bottom: 20px;
-            font-size: 2em;
-        }
-        .projects img {
-            width: 100%;
-            max-width: 350px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .projects img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-        }
-        .contact-form {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            max-width: 500px;
-            margin: auto;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 14px;
-        }
-        .contact-form button {
-            background-color: #003366;
-            color: #ffffff;
             border: none;
-            padding: 15px 20px;
+            padding: 15px 40px;
             border-radius: 8px;
-            cursor: pointer;
-            font-weight: 500;
             font-size: 16px;
+            cursor: pointer;
             transition: background-color 0.3s ease;
-            width: 100%;
         }
-        .contact-form button:hover {
-            background-color: #0056b3;
+        .hero button:hover {
+            background-color: #ffcc00;
         }
         footer {
             background-color: #003366;
             color: #ffffff;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+            margin-top: 40px;
         }
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            .projects img {
-                max-width: 100%;
-            }
-            .contact-form {
-                width: 90%;
-                margin: auto;
+            .hero h1 {
+                font-size: 2.5em;
             }
             .navbar ul {
                 flex-direction: column;
                 gap: 10px;
                 text-align: center;
+            }
+            .navbar img {
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -144,16 +115,14 @@
     <div class="navbar">
         <img src="assets/logo.png" alt="Wisdom Realty Logo">
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
 
-    <div class="header" id="about">
-        <h1>Welcome to Wisdom Realty</h1>
-        <p>Your Trusted Real Estate Partner</p>
-    </div>
+    
+
 
     <div class="section experience">
         <h2>About Me</h2>
@@ -179,43 +148,6 @@
         </div>
     </div>
 
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="https://formsubmit.co/your-email@example.com" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            
-            <button type="submit" onclick="showPopup(event)">Send Message</button>
-        </form>
-    </div>
-    <div class="popup-overlay" id="popup-overlay" style="display: none;">
-        <div class="popup">
-            <h2>Thank You!</h2>
-            <p>Your message has been sent successfully. We will get back to you soon.</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    </div>
-    <script>
-        function showPopup(event) {
-            event.preventDefault();
-            document.getElementById("popup-overlay").style.display = "flex";
-        }
-        function closePopup() {
-            document.getElementById("popup-overlay").style.display = "none";
-            document.querySelector("form").reset();
-        }
-    </script>
-</body>
-</html>
 
     <footer>
         <p>© 2025 Wisdom Realty. All rights reserved.</p>
